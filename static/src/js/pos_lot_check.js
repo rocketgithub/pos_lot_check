@@ -96,12 +96,12 @@ var PackLotLinePopupWidget = PopupWidget.extend({
                                         options_order.orderlines.models.forEach(function (orderline) {
                                             if (orderline.pack_lot_lines.length > 0  && orderline.pack_lot_lines.models.length > 0){
                                                 orderline.pack_lot_lines.models.forEach(function (series) {
-                                                    if (orderline['id'] == options_order_line['id'] && cid != series['cid'] &&lot_name == series['attributes']['lot_name'] ){
+                                                    if (orderline['id'] == options_order_line['id'] && cid != series['cid'] && lot_name == series['attributes']['lot_name'] && self.pos.config.opcion_numero_serie == true){
                                                         var lot_model = pack_lot_lines.get({cid: cid});
                                                         lot_model.remove();
                                                         pack_lot_lines.set_quantity_by_lot();
                                                         options_order.remove_orderline(options_order_line);
-                                                    }else if (orderline['id'] != options_order_line['id'] && lot_name == series['attributes']['lot_name'] ){
+                                                    }else if (orderline['id'] != options_order_line['id'] && lot_name == series['attributes']['lot_name'] && self.pos.config.opcion_numero_serie == true ){
                                                         var lot_model = pack_lot_lines.get({cid: cid});
                                                         lot_model.remove();
                                                         pack_lot_lines.set_quantity_by_lot();
