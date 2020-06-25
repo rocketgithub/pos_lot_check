@@ -20,6 +20,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name='opcion_numero_serie'/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="opcion_numero_serie"/>
+                            <div class="text-muted">
+                                Verificar numero serie por bodega
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </field>
