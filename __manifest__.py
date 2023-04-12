@@ -17,8 +17,8 @@
     'depends': ['point_of_sale','stock'],
 
     'data': [
-        'views/pos_config_view.xml',
-        'views/templates.xml',
+        # 'views/pos_config_view.xml',
+        # 'views/templates.xml',
     ],
     'qweb': [
     ],
