@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-    <record id="pos_lot_check_view_pos_config_form" model="ir.ui.view">
-        <field name="name">pos_lot_check.pos.config.form.view</field>
-        <field name="model">pos.config</field>
-        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.pos_gt</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="pos_hr.res_config_settings_view_form"/>
         <field name="arch" type="xml">
-            <div id="accounting_section" position="after">
-                <h2>Lote</h2>
+            <div id="pos_interface_section" position="after">
+                <h2 class="mt16">Validación de Lotes/Series</h2>
                 <div class="row mt16 o_settings_container" id="pos_lot_check">
                     <div class="col-12 col-lg-6 o_setting_box">
                         <div class="o_setting_left_pane">
-                            <field name='opcion_serie_bodega'/>
+                            <field name='pos_opcion_serie_bodega'/>
                         </div>
                         <div class="o_setting_right_pane">
-                            <label for="opcion_serie_bodega"/>
+                            <label for="pos_opcion_serie_bodega"/>
                             <div class="text-muted">
                                 Verificar numero serie por bodega
                             </div>
@@ -22,10 +21,10 @@
                     </div>
                     <div class="col-12 col-lg-6 o_setting_box">
                         <div class="o_setting_left_pane">
-                            <field name='opcion_numero_serie'/>
+                            <field name='pos_opcion_numero_serie'/>
                         </div>
                         <div class="o_setting_right_pane">
-                            <label for="opcion_numero_serie"/>
+                            <label for="pos_opcion_numero_serie"/>
                             <div class="text-muted">
                                 Verificar numero serie por bodega
                             </div>
@@ -35,5 +34,4 @@
             </div>
         </field>
     </record>
-
 </odoo>
